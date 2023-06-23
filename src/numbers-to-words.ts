@@ -8,7 +8,39 @@ interface INumberToWord{
 
 export function getNumberToWords() :INumberToWord{
 
-  const NumberToWord:Record<number,string> ={
+  
+
+      return {
+         convert(num:number){
+             
+             if(isTensDigit(num)){
+                 
+             }
+             if ( num === 21){
+              return 'twenty-one'
+             }
+             if(num===22){
+              return 'twenty-two'
+             }
+
+             return NumberToWord[num]
+
+         },
+
+      
+      }
+}
+
+function  isTensDigit(num:number):boolean{
+   return true
+} 
+
+function getTensWord(num:number):string{
+     const tens = num - num%10
+
+     return NumberToWord[tens]
+}
+const NumberToWord:Record<number,string> ={
 
       1:'one',
       2:'two',
@@ -42,26 +74,3 @@ export function getNumberToWords() :INumberToWord{
       90 :'ninety'
 
   }
-
-      return {
-         convert(num:number){
-             
-             if(isTensDigit(num))
-             if ( num === 21){
-              return 'twenty-one'
-             }
-             if(num===22){
-              return 'twenty-two'
-             }
-
-             return NumberToWord[num]
-
-         },
-
-      
-      }
-}
-
-function  isTensDigit(num:number):boolean{
-   return true
-} 
