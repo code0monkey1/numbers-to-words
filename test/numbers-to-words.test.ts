@@ -149,7 +149,7 @@ describe('numbers-to-words', () => {
 
         describe('pure multiples of hundreds',()=>{
       test.each([
-                  {num:1100,word:'eleven hundreds'},
+                  {num:1100,word:'eleven hundred'},
                   // {num:2300,word:'two thousand'},
                   // {num:5600,word:'five thousand'},
                   // {num:9800,word:'nine thousand'},

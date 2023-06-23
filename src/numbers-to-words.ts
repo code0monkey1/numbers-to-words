@@ -77,17 +77,12 @@ export function getNumberToWords() :INumberToWord{
              
             const firstTwo= num/100
             
-            if(isBetween21and99(firstTwo)){
+            if(isBetween21and99(firstTwo))
                  word= getTens(firstTwo)
-            }
-            else{
+            else
                  word=NumberToWord[firstTwo]
-            }
-            
-            word+=+' hundred'
 
-
-            return word
+            return word+' hundred'
       }
  
     const thousands = getThousandsWord(num)
