@@ -194,6 +194,30 @@ describe('numbers-to-words', () => {
 
         })
 
+
+        describe('multiples of thousands, with non-zero hundreds, and non zero tens',()=>{
+
+              test.each([
+                {num:1121,word:'one thousand one hundred twenty-one'},
+                // {num:2223,word:'two thousand two hundred twenty-three'},
+                // {num:5395,word:'five thousand three hundred ninety-five'},
+                // {num:9975,word:'nine thousand nine hundred seventy-five'},
+  
+              ])('$num gives $word',({num,word})=>{
+
+                 //Arrange
+                const sut= getNumberToWords()
+        
+                //Act
+                const result= sut.convert(num)
+                
+                //Assert
+                expect(result).toBe(word)
+
+              })
+
+        })
+
      })
 
 })
