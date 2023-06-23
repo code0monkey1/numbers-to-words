@@ -89,7 +89,7 @@ export function getNumberToWords() :INumberToWord{
   }
 
   function handlePureMultiplesOfHundreds(num: number) {
-    
+
     let word
 
     const firstTwo = num / 100
@@ -105,11 +105,9 @@ export function getNumberToWords() :INumberToWord{
 
   function isPureMultipleOfHundred(num:number):boolean{
       
-
       const tens = getTensWord(num)
 
       const ones = getOnesWord(num)
-
 
       return (tens==='zero' && ones==='zero')
 
@@ -171,9 +169,8 @@ function getTensWord(num:number):string{
   
        tens -= tens%10
      
-       if(tens ===0){
-        return 'zero'
-       }
+       if(tens ===0)
+          return 'zero'
 
      return NumberToWord[tens]
 }
@@ -183,10 +180,9 @@ function getHundredsWord(num:number):string{
 
       hundreds = Math.floor(hundreds/100)
      
-    if(hundreds===0){
-      return 'zero'
-    }
-
+    if(hundreds===0)
+        return 'zero'
+    
      return NumberToWord[hundreds] + ' hundred'
 }
 
