@@ -20,15 +20,14 @@ export function getNumberToWords() :INumberToWord{
 
                    const ones = getOnesWord(num)
                   
-                   if(ones === 'zero'){
-                       return tens
-                   }
+                   word =tens+(ones!=='zero'?'-'+ones:'')
+             }
+             else{
 
-                   return tens+'-'+ones
+                word= NumberToWord[num]
              }
 
-            word= NumberToWord[num]
-
+        
             return word
          },
 
