@@ -175,9 +175,9 @@ describe('numbers-to-words', () => {
 
               test.each([
                 {num:1100,word:'one thousand one hundred'},
-                // {num:2200,word:'two thousand'},
-                // {num:5300,word:'five thousand'},
-                // {num:9900,word:'nine thousand'},
+                {num:2200,word:'two thousand two hundred'},
+                {num:5300,word:'five thousand three hundred'},
+                {num:9900,word:'nine thousand nine hundred'},
   
               ])('$num gives $word',({num,word})=>{
 
