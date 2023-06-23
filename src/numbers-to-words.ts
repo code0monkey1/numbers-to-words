@@ -64,9 +64,9 @@ function  isBetween21and99(num:number):boolean{
 function getTensWord(num:number):string{
  
      let tens = num%100
-      
-     tens -=- tens%10
-     
+  
+     tens -= tens%10
+  
      return NumberToWord[tens]
 }
 
