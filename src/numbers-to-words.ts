@@ -16,7 +16,7 @@ export function getNumberToWords() :INumberToWord{
              if(isBetween100and999(num)){
 
                   return 'one hundred'
-                  
+
              }
              else if(isBetween21and99(num)){
                    const tens = getTensWord(num)
@@ -40,6 +40,7 @@ function  isBetween21and99(num:number):boolean{
 } 
 
 function getTensWord(num:number):string{
+  
      const tens = num - num%10
 
      return NumberToWord[tens]
