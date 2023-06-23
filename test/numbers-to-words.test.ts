@@ -30,7 +30,6 @@ describe('numbers-to-words', () => {
 
      })
 
-
      describe('two digits',()=>{
        
         describe('multiple of tens',()=>{
@@ -214,6 +213,41 @@ describe('numbers-to-words', () => {
               })
 
         })
+
+      
+
+     })
+
+     describe('misc test cases',()=>{
+
+       test.each([
+
+                {num:0,word:'zero'},
+                {num:5,word:'five'},
+                {num:8,word:'eight'},
+                {num:10,word:'ten'},
+                {num:21,word:'twenty-one'},
+                {num:77,word:'seventy-seven'},
+                {num:100,word:'one hundred'},
+                {num:303,word:'three hundred three'},
+                {num:555,word:'five hundred fifty-five'},
+                {num:2000,word:'two thousand'},
+                {num:3466,word:'three thousand four hundred sixty-six'},
+                {num:2400 ,word:'two thousand four hundred'}
+  
+              ])('$num gives $word',({num,word})=>{
+
+                 //Arrange
+                const sut= getNumberToWords()
+        
+                //Act
+                const result= sut.convert(num)
+                
+                //Assert
+                expect(result).toBe(word)
+
+              })
+
 
      })
 
