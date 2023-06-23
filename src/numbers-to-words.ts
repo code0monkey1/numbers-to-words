@@ -14,9 +14,11 @@ export function getNumberToWords() :INumberToWord{
 
               let word = ''
              if(isBetween100and999(num)){
-                  return 'one hundren'
+
+                  return 'one hundred'
+                  
              }
-             if(isBetween21and99(num)){
+             else if(isBetween21and99(num)){
                    const tens = getTensWord(num)
 
                    const ones = getOnesWord(num)
