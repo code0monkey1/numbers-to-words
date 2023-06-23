@@ -119,18 +119,18 @@ describe('numbers-to-words', () => {
 
      describe('three digits',()=>{
          
-        describe('muitiples of hundreds',()=>{
+        describe('multiples of hundreds',()=>{
 
-              test('100 gives one hundred',()=>{
+              test.each([{num:100,word:'one hundred'}])('$num gives $word',({num,word})=>{
 
                  //Arrange
                 const sut= getNumberToWords()
         
                 //Act
-                const result= sut.convert(100)
+                const result= sut.convert(num)
                 
                 //Assert
-                expect(result).toBe('one hundred')
+                expect(result).toBe(word)
 
               })
 
