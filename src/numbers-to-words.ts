@@ -18,9 +18,11 @@ export function getNumberToWords() :INumberToWord{
                 
                 const thousands = getThousandsWord(num)
 
-                word = thousands
+             
 
-                const hundred =getHundreds(num)
+                const hundreds =getHundreds(num)
+
+                return word = thousands+hundreds
              }
              else if(isBetween100and999(num)){
 
