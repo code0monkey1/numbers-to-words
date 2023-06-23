@@ -31,7 +31,7 @@ describe('numbers-to-words', () => {
      })
 
 
-     describe('double number',()=>{
+     describe('double numbers',()=>{
 
          test.each([
           {num:10,word:'ten'},
