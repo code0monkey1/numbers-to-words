@@ -14,7 +14,7 @@ export function getNumberToWords() :INumberToWord{
               
              if(isBetween1000and9999(num)){
                 
-                word = getThousands(num, word)
+                word = getThousands(num)
              }
              else if(isBetween100and999(num)){
 
@@ -35,7 +35,9 @@ export function getNumberToWords() :INumberToWord{
       
       }
 
-  function getThousands(num: number, word: string) {
+  function getThousands(num: number) {
+
+
     const thousands = getThousandsWord(num)
 
     const hundreds = getHundredsWord(num)
@@ -43,12 +45,12 @@ export function getNumberToWords() :INumberToWord{
     const tens = getTensWord(num)
 
     const ones = getOnesWord(num)
-
-    word = thousands +
+    
+    return  thousands +
       (hundreds !== 'zero' ? ` ${hundreds}` : '') +
       (tens !== 'zero' ? ` ${tens}` : '') +
       (ones !== 'zero' ? `${tens !== 'zero' ? `-` : ' '}${ones}` : '')
-    return word
+      
   }
 
   function getTens(num: number) {
@@ -70,8 +72,8 @@ export function getNumberToWords() :INumberToWord{
 
     return hundreds +
       (tens !== 'zero' ? ` ${tens}` : '') +
-      (ones !== 'zero' ? `${tens !== 'zero' ? `-` : ' '}${ones}` : '')
-      
+      (ones!=='zero'? `${tens !== 'zero' ? `-` : ' '}${ones}` : '')
+
   }
 }
 
