@@ -60,7 +60,7 @@ describe('numbers-to-words', () => {
      
      
           })
-        describe('between eleven and nineteen', () => {
+        describe('between 11 and 19', () => {
           test.each([
            {num:10,word:'ten'},
            {num:11,word:'eleven'},
@@ -86,13 +86,11 @@ describe('numbers-to-words', () => {
             })
             
           })
-          
-        
 
-
-        describe('greater than 20 , plus ones digit',()=>{
+        describe('between 21 and 99',()=>{
    
        test.each([
+
         {num:21,word:'twenty-one'},
         {num:22,word:'twenty-two'},
         {num:23,word:'twenty-three'},
@@ -115,10 +113,9 @@ describe('numbers-to-words', () => {
        })
    
    
-   })
+    })
+   
      })
-
-
 
 })
 
