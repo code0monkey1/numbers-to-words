@@ -96,7 +96,7 @@ export function getNumbersToWords() :INumbersToWords{
 
     if (isBetween21and99(firstTwo))
       word = getTens(firstTwo)
-
+      
     else
       word = NumberToWord[firstTwo]
 
