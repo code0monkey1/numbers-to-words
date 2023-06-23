@@ -22,20 +22,10 @@ export function getNumberToWords() :INumberToWord{
 
              if(isBetween100and999(num)){
 
-                  const hundreds = getHundredsWord(num)
-                 
-                  const tens = getTensWord(num)
-
-                  const ones = getOnesWord(num)
-                  
-                  const parsedTens = tens !== 'zero' ? 
-                    ` ${tens}` : ''
-
-                  const parsedOnes = ones !== 'zero' ? 
-                    `${tens !== 'zero' ? '-' : ' '}${ones}` : ''
+                  const { parsedHundreds, parsedTens, parsedOnes } = getHundreds(num)
 
 
-                  word = hundreds+parsedTens+parsedOnes
+                  word = parsedHundreds+parsedTens+parsedOnes
 
              }
              else if(isBetween21and99(num)){
@@ -54,6 +44,22 @@ export function getNumberToWords() :INumberToWord{
 
       
       }
+
+  function getHundreds(num: number) {
+
+    const parsedHundreds = getHundredsWord(num)
+
+    const tens = getTensWord(num)
+
+    const ones = getOnesWord(num)
+
+    const parsedTens = tens !== 'zero' ?
+      ` ${tens}` : ''
+
+    const parsedOnes = ones !== 'zero' ?
+      `${tens !== 'zero' ? '-' : ' '}${ones}` : ''
+    return { parsedHundreds, parsedTens, parsedOnes }
+  }
 }
 
 function  isBetween21and99(num:number):boolean{
