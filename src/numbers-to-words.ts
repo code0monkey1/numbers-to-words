@@ -97,9 +97,15 @@ function getOnesWord(num:number):string{
 
 function getHundredsWord(num:number):string{
 
-     const hundreds = Math.floor((num - num%100)/100)
+     const hundreds = Math.floor(num/100)
 
      return NumberToWord[hundreds] + ' hundred'
+}
+
+function getThousandsWord(num :number):string{
+  const thousands = Math.floor((num/1000))
+
+  return NumberToWord[thousands]
 }
 
 const NumberToWord:Record<number,string> ={
