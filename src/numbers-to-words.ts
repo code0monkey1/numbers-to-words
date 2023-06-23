@@ -46,9 +46,7 @@ export function getNumberToWords() :INumberToWord{
     
             const onesWord = getOnesWord(firstTwo)
     
-            console.log(firstTwo,tensWord,onesWord)
-    
-            return tensWord+(onesWord!=='zero'?onesWord:'')+' hundred'
+            return tensWord+(onesWord!=='zero'?` ${onesWord}`:'')+' hundred'
       }
  
     const thousands = getThousandsWord(num)
