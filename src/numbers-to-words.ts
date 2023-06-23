@@ -20,7 +20,7 @@ export function getNumberToWords() :INumberToWord{
 
                 const hundreds = getHundredsWord(num)
   
-                word = thousands+hundreds!=='zero'?hundreds:''
+                word = thousands+(hundreds!=='zero'?` ${hundreds}`:'')
                 
              }
              else if(isBetween100and999(num)){
