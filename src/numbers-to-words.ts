@@ -34,6 +34,7 @@ export function getNumberToWords() :INumberToWord{
 
              }
              else if(isBetween21and99(num)){
+              
                    const tens = getTensWord(num)
 
                    const ones = getOnesWord(num%10)
