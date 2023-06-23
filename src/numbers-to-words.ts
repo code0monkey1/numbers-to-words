@@ -70,20 +70,8 @@ export function getNumberToWords() :INumberToWord{
 
   function getThousands(num: number) {
 
-    
-    if(isPureMultipleOfHundred(num)){
-              
-           let word;
-             
-            const firstTwo= num/100
-            
-            if(isBetween21and99(firstTwo))
-                 word= getTens(firstTwo)
-            else
-                 word=NumberToWord[firstTwo]
-
-            return word+' hundred'
-      }
+    if(isPureMultipleOfHundred(num))
+           return handlePureMultiplesOfHundreds(num)
  
     const thousands = getThousandsWord(num)
 
@@ -98,6 +86,21 @@ export function getNumberToWords() :INumberToWord{
       (tens !== 'zero' ? ` ${tens}` : '') +
       (ones !== 'zero' ? `${tens !== 'zero' ? `-` : ' '}${ones}` : '')
       
+  }
+
+  function handlePureMultiplesOfHundreds(num: number) {
+    
+    let word
+
+    const firstTwo = num / 100
+
+    if (isBetween21and99(firstTwo))
+      word = getTens(firstTwo)
+
+    else
+      word = NumberToWord[firstTwo]
+
+    return word + ' hundred'
   }
 
   function isPureMultipleOfHundred(num:number):boolean{
