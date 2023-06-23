@@ -18,14 +18,17 @@ export function getNumberToWords() :INumberToWord{
       7: 'seven',
       8: 'eight',
       9 : 'nine',
-      0: 'zero'
+      0: 'zero',
+
+
+      10:'ten'
   }
 
       return {
          convert(num:number){
 
              return NumberToWord[num]
-             
+
          }
       }
 }

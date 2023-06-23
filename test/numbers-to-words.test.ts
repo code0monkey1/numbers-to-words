@@ -16,15 +16,16 @@ describe('numbers-to-words', () => {
           {num:7,word:'seven'},
           {num:8,word:'eight'},
           {num:9,word:'nine'},
-        ])('$num gives $word',()=>{
+        ])('$num gives $word',({num,word})=>{
            
            //arrange
              const sut= getNumberToWords()
+
             //act
-            const result= sut.convert(1)
+            const result= sut.convert(num)
             
             //assert
-            expect(result).toBe('one')
+            expect(result).toBe(word)
 
          })
 
@@ -35,7 +36,7 @@ describe('numbers-to-words', () => {
 
           
          test.each([
-          {num:10,word:'zero'},
+          {num:10,word:'ten'},
           // {num:1,word:'one'},
           // {num:2,word:'two'},
           // {num:3,word:'three'},
@@ -45,15 +46,15 @@ describe('numbers-to-words', () => {
           // {num:7,word:'seven'},
           // {num:8,word:'eight'},
           // {num:9,word:'nine'},
-        ])('$num gives $word',()=>{
+        ])('$num gives $word',({num,word})=>{
            
            //arrange
              const sut= getNumberToWords()
             //act
-            const result= sut.convert(10)
+            const result= sut.convert(num)
             
             //assert
-            expect(result).toBe('ten')
+            expect(result).toBe(word)
 
          })
 
