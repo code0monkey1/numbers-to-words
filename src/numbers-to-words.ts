@@ -71,7 +71,7 @@ export function getNumberToWords() :INumberToWord{
 
       console.log("tens:",tens,"ones:",ones)
 
-      console.log(tens===ones && ones==='zero')
+      console.log(tens===ones && ones==='zero',tens==='zero' && ones==='zero')
 
       return (tens==='zero' && ones==='zero')
 
