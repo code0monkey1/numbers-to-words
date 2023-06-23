@@ -1,12 +1,10 @@
 # tdd-fundamentals-in-typescript
 
-### So , what is Test Driven Development ? 
-
-![TDD](pictures/tdd.jpg 'test driven development')
+### Numbers to Words Kata
 
 ---
 
-[TDD Exercise Book](./data/TDD-Fundamentals-in-TypeScript.pdf)
+[Kata Link](https://www.tddbuddy.com/katas/numbers-to-words.html)
 
 ---
 
