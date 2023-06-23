@@ -33,7 +33,34 @@ describe('numbers-to-words', () => {
 
      describe('double numbers',()=>{
        
-        describe('between ten and twenty', () => {
+        describe('multiple of tens',()=>{
+     
+              test.each([
+               {num:10,word:'ten'},
+               {num:20,word:'twenty'},
+               {num:30,word:'thirty'},
+               {num:40,word:'forty'},
+               {num:50,word:'fifty'},
+               {num:60,word:'sixty'},
+               {num:70,word:'seventy'},
+               {num:80,word:'eighty'},
+               {num:90,word:'ninety'},
+             ])('$num gives $word',({num,word})=>{
+                
+                //Arrange
+                  const sut= getNumberToWords()
+     
+                 //Act
+                 const result= sut.convert(num)
+                 
+                 //Assert
+                 expect(result).toBe(word)
+     
+              })
+     
+     
+          })
+        describe('between eleven and nineteen', () => {
           test.each([
            {num:10,word:'ten'},
            {num:11,word:'eleven'},
@@ -55,39 +82,13 @@ describe('numbers-to-words', () => {
              
              //Assert
              expect(result).toBe(word)
-  
+             
+            })
+            
           })
           
-        })
         
 
-        describe('multiple of tens',()=>{
-   
-            test.each([
-             {num:10,word:'ten'},
-             {num:20,word:'twenty'},
-             {num:30,word:'thirty'},
-             {num:40,word:'forty'},
-             {num:50,word:'fifty'},
-             {num:60,word:'sixty'},
-             {num:70,word:'seventy'},
-             {num:80,word:'eighty'},
-             {num:90,word:'ninety'},
-           ])('$num gives $word',({num,word})=>{
-              
-              //Arrange
-                const sut= getNumberToWords()
-   
-               //Act
-               const result= sut.convert(num)
-               
-               //Assert
-               expect(result).toBe(word)
-   
-            })
-   
-   
-        })
 
         describe('greater than 20 , plus ones digit',()=>{
    
