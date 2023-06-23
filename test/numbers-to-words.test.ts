@@ -59,5 +59,35 @@ describe('numbers-to-words', () => {
 
 
      })
+
+
+     describe('double numbers multiple of tens',()=>{
+
+         test.each([
+          {num:10,word:'ten'},
+          {num:20,word:'twenty'},
+          // {num:20,word:'twelve'},
+          // {num:13,word:'thirteen'},
+          // {num:14,word:'fourteen'},
+          // {num:15,word:'fifteen'},
+          // {num:16,word:'sixteen'},
+          // {num:17,word:'seventeen'},
+          // {num:18,word:'eighteen'},
+          // {num:19,word:'nineteen'},
+        ])('$num gives $word',({num,word})=>{
+           
+           //Arrange
+             const sut= getNumberToWords()
+
+            //Act
+            const result= sut.convert(num)
+            
+            //Assert
+            expect(result).toBe(word)
+
+         })
+
+
+     })
 })
 
