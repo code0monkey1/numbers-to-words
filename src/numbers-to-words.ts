@@ -19,6 +19,8 @@ export function getNumberToWords() :INumberToWord{
                 const thousands = getThousandsWord(num)
 
                 const hundreds = getHundredsWord(num)
+
+                const tens = getTensWord(num)
   
                 word = thousands+(hundreds!=='zero'?` ${hundreds}`:'')
                 
@@ -81,7 +83,11 @@ function getTensWord(num:number):string{
       let tens=num%100
   
        tens -= tens%10
-  
+     
+       if(tens ===0){
+        return 'zero'
+       }
+       
      return NumberToWord[tens]
 }
 
