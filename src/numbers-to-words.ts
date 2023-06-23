@@ -69,7 +69,7 @@ export function getNumberToWords() :INumberToWord{
 
       const ones = getOnesWord(num)
 
-      console.log(tens,ones)
+      console.log("tens:",tens,"ones:",ones)
 
       return (tens==='zero' && ones==='zero')
 
