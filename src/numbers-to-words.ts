@@ -109,7 +109,11 @@ function getHundredsWord(num:number):string{
      let hundreds = num%1000
 
       hundreds = Math.floor(hundreds/100)
-
+     
+    if(hundreds===0){
+      return 'zero'
+    }
+    
      return NumberToWord[hundreds] + ' hundred'
 }
 
