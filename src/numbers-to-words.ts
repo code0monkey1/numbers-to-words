@@ -17,7 +17,7 @@ export function getNumberToWords() :INumberToWord{
 
              if(isBetween100and999(num)){
 
-                  const hundreds = num/100
+                  const hundreds = Math.floor(num/100)
                  
                   const tens = getTensWord(num%100)
 
