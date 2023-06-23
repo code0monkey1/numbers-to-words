@@ -9,6 +9,7 @@ interface INumberToWord{
 export function getNumberToWords() :INumberToWord{
 
   const NumberToWord:Record<number,string> ={
+    
       1:'one',
       2:'two',
       3:'three',
@@ -21,7 +22,18 @@ export function getNumberToWords() :INumberToWord{
       0: 'zero',
 
 
-      10:'ten'
+      10:'ten',
+      11:'eleven',
+      12:'twelve',
+      13:'thirteen',
+      14:'fourteen',
+      15:'fifteen',
+      16:'sixteen',
+      17:'seventeen',
+      18:'eighteen',
+      19:'nineteen'
+
+
   }
 
       return {

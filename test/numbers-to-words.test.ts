@@ -37,7 +37,7 @@ describe('numbers-to-words', () => {
           
          test.each([
           {num:10,word:'ten'},
-          // {num:1,word:'one'},
+          {num:11,word:'eleven'},
           // {num:2,word:'two'},
           // {num:3,word:'three'},
           // {num:4,word:'four'},
@@ -48,12 +48,13 @@ describe('numbers-to-words', () => {
           // {num:9,word:'nine'},
         ])('$num gives $word',({num,word})=>{
            
-           //arrange
+           //Arrange
              const sut= getNumberToWords()
-            //act
+
+            //Act
             const result= sut.convert(num)
             
-            //assert
+            //Assert
             expect(result).toBe(word)
 
          })
