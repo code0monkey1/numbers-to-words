@@ -54,7 +54,7 @@ export function getNumberToWords() :INumberToWord{
 
         const onesWord = getOnesWord(firstTwo)
 
-        return tensWord+(onesWord!=='zero'?onesWord:''+onesWord)
+        return tensWord+(onesWord!=='zero'?onesWord:''+onesWord)+' hundred'
     }
     
     return  thousands +
