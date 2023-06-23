@@ -20,13 +20,13 @@ export function getNumberToWords() :INumberToWord{
 
              }
 
-             else if(isBetween100and999(num)){
+             if(isBetween100and999(num)){
 
                   const hundreds = getHundredsWord(num)
                  
-                  const tens = getTensWord(num)
+                  const tens = getTensWord(num%100)
 
-                  const ones = getOnesWord(num)
+                  const ones = getOnesWord(num%10)
                   
                   const parsedTens = tens !== 'zero' ? 
                     ` ${tens}` : ''
@@ -62,10 +62,8 @@ function  isBetween21and99(num:number):boolean{
 } 
 
 function getTensWord(num:number):string{
-     
-     let tens = num%100
-     
-     tens=- num%10
+
+     const tens = num - num%10
 
      return NumberToWord[tens]
 }
