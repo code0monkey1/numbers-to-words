@@ -12,6 +12,7 @@ export function getNumberToWords() :INumberToWord{
 
       return {
          convert(num:number){
+
               let word = ''
 
              if(isTensDigit(num)){
@@ -26,7 +27,9 @@ export function getNumberToWords() :INumberToWord{
                    return tens+'-'+ones
              }
 
-             return NumberToWord[num]
+            word= NumberToWord[num]
+
+            return word
          },
 
       
