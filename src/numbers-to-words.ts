@@ -60,7 +60,7 @@ export function getNumberToWords() :INumberToWord{
     const parsedOnes = ones !== 'zero' ?
       `${tens !== 'zero' ? '-' : ' '}${ones}` : ''
 
-    return parsedHundreds+parsedTens+parsedOnes
+    return parsedHundreds+' '+getTens(num)
   }
 }
 
