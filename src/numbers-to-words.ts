@@ -17,11 +17,11 @@ export function getNumberToWords() :INumberToWord{
 
              if(isBetween100and999(num)){
 
-                  const hundreds = Math.floor(num/100)
+                  const hundreds = getHundredsWord(num)
                  
                   const tens = getTensWord(num%100)
 
-                  const ones = getOnesWord(hundreds%100)
+                  const ones = getOnesWord(num%10)
                   
                   word = hundreds+
                         ' hundred '+
@@ -71,6 +71,13 @@ function getOnesWord(num:number):string{
 
      return NumberToWord[ones]
 
+}
+
+function getHundredsWord(num:number):string{
+
+     const hundreds = Math.floor((num - num%100)/100)
+
+     return NumberToWord[hundreds]+' hundred '
 }
 
 const NumberToWord:Record<number,string> ={
