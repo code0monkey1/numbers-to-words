@@ -45,7 +45,8 @@ export function getNumberToWords() :INumberToWord{
 
       return {
          convert(num:number){
-
+             
+             if(isTensDigit(num))
              if ( num === 21){
               return 'twenty-one'
              }
@@ -55,6 +56,12 @@ export function getNumberToWords() :INumberToWord{
 
              return NumberToWord[num]
 
-         }
+         },
+
+      
       }
 }
+
+function  isTensDigit(num:number):boolean{
+   return true
+} 
