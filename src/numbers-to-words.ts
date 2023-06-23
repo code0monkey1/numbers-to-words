@@ -37,7 +37,7 @@ interface INumberToWord{
       convert:(num : number)=>string
 }
 
-export function getNumberToWords() :INumberToWord{
+export function getNumberToWord() :INumberToWord{
 
 
       return {
