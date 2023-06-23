@@ -47,22 +47,14 @@ export function getNumberToWords() :INumberToWord{
     const ones = getOnesWord(num)
 
     if(tens==='zero' && ones=='zero'){
-            
-             let word ;
-          
-            const firstTwoDigits = num /100
+         
+        const firstTwo= num/100
 
-           if(isBetween21and99(firstTwoDigits)){
+        const tensWord = getTensWord(firstTwo)
 
-                   word = getTens(firstTwoDigits)
-             }
-             else{
+        const onesWord = getOnesWord(firstTwo)
 
-                word= NumberToWord[firstTwoDigits]
-             }
-
-
-        return word+" hundred";
+        return tensWord+onesWord!=='zero'?onesWord:''+onesWord
     }
     
     return  thousands +
