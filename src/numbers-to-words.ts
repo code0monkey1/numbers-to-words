@@ -14,13 +14,11 @@ export function getNumberToWords() :INumberToWord{
 
              let word = ''
               
-             if(isBetween1000and9999(num)){
+             if(isBetween1000and9999(num))
                 
-                 return 'one thousand'
+                 word = getThousandsWord(num)
 
-             }
-
-             if(isBetween100and999(num))
+             else if(isBetween100and999(num))
                  word = getHundreds(num)
 
              else if(isBetween21and99(num))
@@ -103,11 +101,12 @@ function getHundredsWord(num:number):string{
 }
 
 function getThousandsWord(num :number):string{
+
    const thousands = Math.floor(num/1000)
 
    console.log(thousands)
 
-   return 'thousands'
+   return NumberToWord[thousands]+ ' thousand'
 }
 
 const NumberToWord:Record<number,string> ={
