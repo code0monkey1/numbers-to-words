@@ -30,6 +30,18 @@ describe('numbers-to-words', () => {
 
          })
 
+             test('3 gives three',()=>{
+           
+           //arrange
+             const sut= getNumberToWords()
+            //act
+            const result= sut.convert(3)
+            
+            //assert
+            expect(result).toBe('three')
+
+         })
+
      })
 })
 
