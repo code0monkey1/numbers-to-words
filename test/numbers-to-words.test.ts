@@ -2,7 +2,7 @@ import { getNumberToWords } from "../src/numbers-to-words"
 
 describe('numbers-to-words', () => {
       
-     describe('ones',()=>{
+     describe('one digit',()=>{
 
          test.each([
           {num:0,word:'zero'},
@@ -31,7 +31,7 @@ describe('numbers-to-words', () => {
      })
 
 
-     describe('tens',()=>{
+     describe('two digits',()=>{
        
         describe('multiple of tens',()=>{
      
@@ -115,6 +115,27 @@ describe('numbers-to-words', () => {
    
     })
    
+     })
+
+     describe('three digits',()=>{
+         
+        describe('muitiples of hundreds',()=>{
+
+              test('100 gives one hundred',()=>{
+
+                 //Arrange
+                const sut= getNumberToWords()
+        
+                //Act
+                const result= sut.convert(100)
+                
+                //Assert
+                expect(result).toBe('one hundred')
+
+              })
+
+        })
+
      })
 
 })
