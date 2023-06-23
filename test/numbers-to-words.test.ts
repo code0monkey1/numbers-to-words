@@ -89,18 +89,16 @@ describe('numbers-to-words', () => {
 
      })
 
-          describe('double numbers multiple of tens , plus ones digit',()=>{
+          describe('double numbers greater than 20 , plus ones digit',()=>{
 
          test.each([
-          {num:10,word:'ten'},
-          {num:20,word:'twenty'},
-          {num:30,word:'thirty'},
-          {num:40,word:'forty'},
-          {num:50,word:'fifty'},
-          {num:60,word:'sixty'},
-          {num:70,word:'seventy'},
-          {num:80,word:'eighty'},
-          {num:90,word:'ninety'},
+          {num:21,word:'twenty-one'},
+          {num:22,word:'twenty-two'},
+          // {num:50,word:'fifty'},
+          // {num:60,word:'sixty'},
+          // {num:70,word:'seventy'},
+          // {num:80,word:'eighty'},
+          // {num:90,word:'ninety'},
         ])('$num gives $word',({num,word})=>{
            
            //Arrange

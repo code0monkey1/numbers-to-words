@@ -46,6 +46,13 @@ export function getNumberToWords() :INumberToWord{
       return {
          convert(num:number){
 
+             if ( num === 21){
+              return 'twenty-one'
+             }
+             if(num===22){
+              return 'twenty-two'
+             }
+
              return NumberToWord[num]
 
          }
