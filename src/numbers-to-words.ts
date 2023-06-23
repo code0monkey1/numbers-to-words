@@ -53,7 +53,7 @@ export function getNumberToWords() :INumberToWord{
         const tensWord = getTensWord(firstTwo)
 
         const onesWord = getOnesWord(firstTwo)
-
+        console.log(firstTwo,tensWord,onesWord)
         return tensWord+(onesWord!=='zero'?onesWord:''+onesWord)+' hundred'
     }
     
