@@ -6,7 +6,18 @@ describe('numbers-to-words', () => {
      describe('single number',()=>{
 
          
-         test('1 gives one',()=>{
+         test.each([
+          {num:0,word:'zero'},
+          {num:1,word:'one'},
+          {num:2,word:'two'},
+          {num:3,word:'three'},
+          {num:4,word:'four'},
+          {num:5,word:'five'},
+          {num:6,word:'six'},
+          {num:7,word:'seven'},
+          {num:8,word:'eight'},
+          {num:9,word:'nine'},
+        ])('$num gives $word',()=>{
            
            //arrange
              const sut= getNumberToWords()
@@ -15,30 +26,6 @@ describe('numbers-to-words', () => {
             
             //assert
             expect(result).toBe('one')
-
-         })
-
-            test('2 gives two',()=>{
-           
-           //arrange
-             const sut= getNumberToWords()
-            //act
-            const result= sut.convert(2)
-            
-            //assert
-            expect(result).toBe('two')
-
-         })
-
-             test('3 gives three',()=>{
-           
-           //arrange
-             const sut= getNumberToWords()
-            //act
-            const result= sut.convert(3)
-            
-            //assert
-            expect(result).toBe('three')
 
          })
 
