@@ -60,6 +60,7 @@ export function getNumberToWords() :INumberToWord{
     const ones = getOnesWord(num)
 
     return tens+(ones!=='zero'?'-'+ones:'')
+    
   }
 
   function getHundreds(num: number) {
