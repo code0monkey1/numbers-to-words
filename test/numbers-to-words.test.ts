@@ -66,14 +66,41 @@ describe('numbers-to-words', () => {
          test.each([
           {num:10,word:'ten'},
           {num:20,word:'twenty'},
-          // {num:20,word:'twelve'},
-          // {num:13,word:'thirteen'},
-          // {num:14,word:'fourteen'},
-          // {num:15,word:'fifteen'},
-          // {num:16,word:'sixteen'},
-          // {num:17,word:'seventeen'},
-          // {num:18,word:'eighteen'},
-          // {num:19,word:'nineteen'},
+          {num:30,word:'thirty'},
+          {num:40,word:'forty'},
+          {num:50,word:'fifty'},
+          {num:60,word:'sixty'},
+          {num:70,word:'seventy'},
+          {num:80,word:'eighty'},
+          {num:90,word:'ninety'},
+        ])('$num gives $word',({num,word})=>{
+           
+           //Arrange
+             const sut= getNumberToWords()
+
+            //Act
+            const result= sut.convert(num)
+            
+            //Assert
+            expect(result).toBe(word)
+
+         })
+
+
+     })
+
+          describe('double numbers multiple of tens , plus ones digit',()=>{
+
+         test.each([
+          {num:10,word:'ten'},
+          {num:20,word:'twenty'},
+          {num:30,word:'thirty'},
+          {num:40,word:'forty'},
+          {num:50,word:'fifty'},
+          {num:60,word:'sixty'},
+          {num:70,word:'seventy'},
+          {num:80,word:'eighty'},
+          {num:90,word:'ninety'},
         ])('$num gives $word',({num,word})=>{
            
            //Arrange
