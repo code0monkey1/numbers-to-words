@@ -20,7 +20,7 @@ export function getNumberToWords() :INumberToWord{
 
                 word = thousands
 
-                
+                const hundred =getHundreds(num)
              }
              else if(isBetween100and999(num)){
 
@@ -51,6 +51,8 @@ export function getNumberToWords() :INumberToWord{
   }
 
   function getHundreds(num: number) {
+
+     num%=1000
 
     const parsedHundreds = getHundredsWord(num)
 
