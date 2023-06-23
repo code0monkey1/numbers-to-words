@@ -23,8 +23,7 @@ export function getNumberToWords() :INumberToWord{
 
                   const ones = getOnesWord(num%10)
                   
-                  word = hundreds+
-                        ' hundred'+
+                  word = hundreds+' hundred'+
                         (tens!=='zero'?` ${tens}`:'')+
                         (ones!=='zero'?`${tens!=='zero'?'-':' '}${ones}`:'')
 
