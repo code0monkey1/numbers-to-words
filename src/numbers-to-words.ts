@@ -15,7 +15,7 @@ export function getNumberToWords() :INumberToWord{
 
               let word = ''
 
-             if(isTensDigit(num)){
+             if(isBetween20and100(num)){
                    const tens = getTensWord(num)
 
                    const ones = getOnesWord(num)
@@ -35,7 +35,7 @@ export function getNumberToWords() :INumberToWord{
       }
 }
 
-function  isTensDigit(num:number):boolean{
+function  isBetween20and100(num:number):boolean{
     return num>20 && num <100
 } 
 
