@@ -77,7 +77,7 @@ function getHundredsWord(num:number):string{
 
      const hundreds = Math.floor((num - num%100)/100)
 
-     return NumberToWord[hundreds]+' hundred '
+     return NumberToWord[hundreds]
 }
 
 const NumberToWord:Record<number,string> ={
