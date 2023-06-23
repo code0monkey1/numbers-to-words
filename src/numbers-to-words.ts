@@ -26,7 +26,7 @@ export function getNumberToWords() :INumberToWord{
                  
                   const tens = getTensWord(num%100)
 
-                  const ones = getOnesWord(num%10)
+                  const ones = getOnesWord(num)
                   
                   const parsedTens = tens !== 'zero' ? 
                     ` ${tens}` : ''
@@ -42,7 +42,7 @@ export function getNumberToWords() :INumberToWord{
 
                    const tens = getTensWord(num)
 
-                   const ones = getOnesWord(num%10)
+                   const ones = getOnesWord(num)
                   
                    word =tens+(ones!=='zero'?'-'+ones:'')
              }
