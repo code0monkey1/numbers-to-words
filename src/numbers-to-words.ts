@@ -27,7 +27,8 @@ export function getNumberToWords() :INumberToWord{
                 word = thousands+
                 (hundreds!=='zero'?` ${hundreds}`:'')+
                 (tens !=='zero'?` ${tens}`:'')+
-                (ones!=='zero'?` ${ones}`:'')
+                (tens !=='zero'?`-`:'')+
+                (ones!=='zero'?`${ones}`:'')
                 
              }
              else if(isBetween100and999(num)){
