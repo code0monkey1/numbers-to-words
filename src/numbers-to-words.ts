@@ -4,8 +4,6 @@ interface INumberToWord{
       convert:(num : number)=>string
 }
 
-
-
 export function getNumberToWords() :INumberToWord{
 
 
