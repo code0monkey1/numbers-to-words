@@ -94,11 +94,11 @@ describe('numbers-to-words', () => {
          test.each([
           {num:21,word:'twenty-one'},
           {num:22,word:'twenty-two'},
-          // {num:50,word:'fifty'},
-          // {num:60,word:'sixty'},
-          // {num:70,word:'seventy'},
-          // {num:80,word:'eighty'},
-          // {num:90,word:'ninety'},
+          {num:23,word:'twenty-three'},
+          {num:95,word:'ninety-five'},
+          {num:72,word:'seventy-two'},
+          {num:89,word:'eighty-nine'},
+          {num:91,word:'ninety-one'},
         ])('$num gives $word',({num,word})=>{
            
            //Arrange
