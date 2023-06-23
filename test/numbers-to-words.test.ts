@@ -146,8 +146,30 @@ describe('numbers-to-words', () => {
      })
 
          describe('four digits',()=>{
+
+        describe('pure multiples of hundreds',()=>{
+      test.each([
+                  {num:1100,word:'eleven hundreds'},
+                  // {num:2300,word:'two thousand'},
+                  // {num:5600,word:'five thousand'},
+                  // {num:9800,word:'nine thousand'},
+    
+                ])('$num gives $word',({num,word})=>{
+
+                  //Arrange
+                  const sut= getNumberToWords()
+          
+                  //Act
+                  const result= sut.convert(num)
+                  
+                  //Assert
+                  expect(result).toBe(word)
+
+                })
+
+        })
          
-        describe('multiples of thousands',()=>{
+        describe('pure multiples of thousands',()=>{
 
               test.each([
                 {num:1000,word:'one thousand'},
@@ -170,7 +192,7 @@ describe('numbers-to-words', () => {
 
         })
 
-        describe('multiples of thousands, with non-zero hundreds',()=>{
+        describe('with non-zero hundreds',()=>{
               test.each([
                 {num:1100,word:'one thousand one hundred'},
                 {num:2200,word:'two thousand two hundred'},
