@@ -23,7 +23,10 @@ export function getNumberToWords() :INumberToWord{
 
                   const ones = getOnesWord(hundreds%100)
                   
-                  word = hundreds+' hundred '+(tens!=='zero'?`${tens} `:'')+(ones!=='zero'?ones:'')
+                  word = hundreds+
+                        ' hundred '+
+                        (tens!=='zero'?`${tens} `:'')+
+                        (ones!=='zero'?ones:'')
 
              }
              else if(isBetween21and99(num)){
