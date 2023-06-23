@@ -121,7 +121,10 @@ describe('numbers-to-words', () => {
          
         describe('multiples of hundreds',()=>{
 
-              test.each([{num:100,word:'one hundred'}])('$num gives $word',({num,word})=>{
+              test.each([
+                {num:100,word:'one hundred'},
+                {num:101,word:'one hundred one'},
+              ])('$num gives $word',({num,word})=>{
 
                  //Arrange
                 const sut= getNumberToWords()
