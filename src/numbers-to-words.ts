@@ -22,10 +22,7 @@ export function getNumberToWords() :INumberToWord{
 
              if(isBetween100and999(num)){
 
-                  const { parsedHundreds, parsedTens, parsedOnes } = getHundreds(num)
-
-
-                  word = parsedHundreds+parsedTens+parsedOnes
+                 word = getHundreds(num)
 
              }
              else if(isBetween21and99(num)){
@@ -47,7 +44,7 @@ export function getNumberToWords() :INumberToWord{
     const tens = getTensWord(num)
 
     const ones = getOnesWord(num)
-    
+
     return { tens, ones }
   }
 
@@ -65,7 +62,7 @@ export function getNumberToWords() :INumberToWord{
     const parsedOnes = ones !== 'zero' ?
       `${tens !== 'zero' ? '-' : ' '}${ones}` : ''
 
-    return { parsedHundreds, parsedTens, parsedOnes }
+    return parsedHundreds+parsedTens+parsedOnes
   }
 }
 
