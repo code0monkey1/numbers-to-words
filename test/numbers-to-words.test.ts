@@ -98,7 +98,8 @@ describe('numbers-to-words', () => {
           {num:95,word:'ninety-five'},
           {num:72,word:'seventy-two'},
           {num:89,word:'eighty-nine'},
-          {num:91,word:'ninety-one'},
+          {num:99,word:'ninety-nine'},
+
         ])('$num gives $word',({num,word})=>{
            
            //Arrange
