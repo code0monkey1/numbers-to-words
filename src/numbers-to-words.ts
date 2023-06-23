@@ -12,19 +12,21 @@ export function getNumberToWords() :INumberToWord{
 
       return {
          convert(num:number){
-             
+              let word = ''
+
              if(isTensDigit(num)){
-                 
-             }
-             if ( num === 21){
-              return 'twenty-one'
-             }
-             if(num===22){
-              return 'twenty-two'
+                   const tens = getTensWord(num)
+
+                   const ones = getOnesWord(num)
+                  
+                   if(ones === 'zero'){
+                       return tens
+                   }
+
+                   return tens+'-'+ones
              }
 
              return NumberToWord[num]
-
          },
 
       
@@ -32,13 +34,18 @@ export function getNumberToWords() :INumberToWord{
 }
 
 function  isTensDigit(num:number):boolean{
-   return true
+    return num>20 && num <100
 } 
 
 function getTensWord(num:number):string{
      const tens = num - num%10
 
      return NumberToWord[tens]
+}
+
+function getOnesWord(num:number):string{
+     const ones =  num%10
+     return NumberToWord[ones]
 }
 const NumberToWord:Record<number,string> ={
 
