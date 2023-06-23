@@ -21,10 +21,13 @@ export function getNumberToWords() :INumberToWord{
                 const hundreds = getHundredsWord(num)
 
                 const tens = getTensWord(num)
+
+                const ones = getOnesWord(num)
   
                 word = thousands+
                 (hundreds!=='zero'?` ${hundreds}`:'')+
-                (tens !=='zero'?` ${tens}`:'')
+                (tens !=='zero'?` ${tens}`:'')+
+                (ones!=='zero'?` ${ones}`:'')
                 
              }
              else if(isBetween100and999(num)){
