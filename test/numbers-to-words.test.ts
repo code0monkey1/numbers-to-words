@@ -146,5 +146,34 @@ describe('numbers-to-words', () => {
 
      })
 
+         describe('four digits',()=>{
+         
+        describe('multiples of thousands',()=>{
+
+              test.each([
+                {num:1000,word:'one thousand'},
+                {num:2000,word:'two thousand'},
+                // {num:209,word:'two hundred nine'},
+                // {num:999,word:'nine hundred ninety-nine'},
+                // {num:872,word:'eight hundred seventy-two'},
+                // {num :583, word :'five hundred eighty-three'},
+                // {num :123, word :'one hundred twenty-three'}
+              ])('$num gives $word',({num,word})=>{
+
+                 //Arrange
+                const sut= getNumberToWords()
+        
+                //Act
+                const result= sut.convert(num)
+                
+                //Assert
+                expect(result).toBe(word)
+
+              })
+
+        })
+
+     })
+
 })
 
