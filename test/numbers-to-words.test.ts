@@ -2,7 +2,7 @@ import { getNumberToWords } from "../src/numbers-to-words"
 
 describe('numbers-to-words', () => {
       
-     describe('single number',()=>{
+     describe('ones',()=>{
 
          test.each([
           {num:0,word:'zero'},
@@ -31,7 +31,7 @@ describe('numbers-to-words', () => {
      })
 
 
-     describe('double numbers',()=>{
+     describe('tens',()=>{
        
         describe('multiple of tens',()=>{
      
