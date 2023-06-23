@@ -21,7 +21,7 @@ export function getNumberToWords() :INumberToWord{
                  
                   const tens = getTensWord(num%100)
 
-                  const ones = getOnesWord(num%100)
+                  const ones = getOnesWord(num%10)
                   
                   word = hundreds+' hundred'+
                         (tens!=='zero'?` ${tens}`:'')+
@@ -31,7 +31,7 @@ export function getNumberToWords() :INumberToWord{
              else if(isBetween21and99(num)){
                    const tens = getTensWord(num)
 
-                   const ones = getOnesWord(num)
+                   const ones = getOnesWord(num%10)
                   
                    word =tens+(ones!=='zero'?'-'+ones:'')
              }
@@ -65,8 +65,8 @@ function isBetween100and999(num:number):boolean{
 }
 
 function getOnesWord(num:number):string{
-
-     const ones =  num%10
+  
+     const ones = num%10
 
      return NumberToWord[ones]
 
