@@ -62,21 +62,31 @@ export function getNumberToWords() :INumberToWord{
 
   function getHundreds(num: number) {
 
-     num%=1000
+    //  num%=1000
 
-    const parsedHundreds = getHundredsWord(num)
+    // const parsedHundreds = getHundredsWord(num)
+
+    // const tens = getTensWord(num)
+
+    // const ones = getOnesWord(num)
+
+    // const parsedTens = tens !== 'zero' ?
+    //   ` ${tens}` : ''
+
+    // const parsedOnes = ones!=='zero' ?
+    //   `${tens !== 'zero' ? '-' : ' '}${ones}` : ''
+
+    // return parsedHundreds+parsedTens+parsedOnes
+
+    const hundreds = getHundredsWord(num)
 
     const tens = getTensWord(num)
 
     const ones = getOnesWord(num)
 
-    const parsedTens = tens !== 'zero' ?
-      ` ${tens}` : ''
-
-    const parsedOnes = ones!=='zero' ?
-      `${tens !== 'zero' ? '-' : ' '}${ones}` : ''
-
-    return parsedHundreds+parsedTens+parsedOnes
+    return hundreds +
+      (tens !== 'zero' ? ` ${tens}` : '') +
+      (ones !== 'zero' ? `${tens !== 'zero' ? `-` : ' '}${ones}` : '')
   }
 }
 
