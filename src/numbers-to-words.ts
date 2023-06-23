@@ -14,18 +14,26 @@ export function getNumberToWords() :INumberToWord{
 
              let word = ''
               
-             if(isBetween1000and9999(num))
+             if(isBetween1000and9999(num)){
                 
-                 word = getThousandsWord(num)
+                const thousands = getThousandsWord(num)
 
-             else if(isBetween100and999(num))
+                word = thousands
+
+                
+             }
+             else if(isBetween100and999(num)){
+
                  word = getHundreds(num)
+             }
+             else if(isBetween21and99(num)){
 
-             else if(isBetween21and99(num))
                    word = getTens(num)
-             
-             else
+             }
+             else{
+
                 word= NumberToWord[num]
+             }
         
             return word
          },
