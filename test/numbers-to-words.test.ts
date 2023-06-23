@@ -2,7 +2,6 @@ import { getNumberToWords } from "../src/numbers-to-words"
 
 describe('numbers-to-words', () => {
       
-
      describe('single number',()=>{
 
          test.each([
@@ -34,7 +33,6 @@ describe('numbers-to-words', () => {
 
      describe('double number',()=>{
 
-          
          test.each([
           {num:10,word:'ten'},
           {num:11,word:'eleven'},
