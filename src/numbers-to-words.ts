@@ -8,7 +8,6 @@ interface INumberToWord{
 
 export function getNumberToWords() :INumberToWord{
 
-  
 
       return {
          convert(num:number){
@@ -22,11 +21,8 @@ export function getNumberToWords() :INumberToWord{
                   
                    word =tens+(ones!=='zero'?'-'+ones:'')
              }
-             else{
-
+             else
                 word= NumberToWord[num]
-             }
-
         
             return word
          },
