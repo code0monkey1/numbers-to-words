@@ -26,7 +26,7 @@ export function getNumberToWords() :INumberToWord{
                   word = hundreds+
                         ' hundred'+
                         (tens!=='zero'?` ${tens}`:'')+
-                        (ones!=='zero'?` ${ones}`:'')
+                        (ones!=='zero'?`-${ones}`:'')
 
              }
              else if(isBetween21and99(num)){

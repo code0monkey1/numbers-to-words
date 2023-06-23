@@ -125,10 +125,10 @@ describe('numbers-to-words', () => {
                 {num:100,word:'one hundred'},
                 {num:101,word:'one hundred one'},
                 {num:209,word:'two hundred nine'},
-                {num:999,word:'nine hundred ninety nine'},
-                {num:872,word:'eight hundred seventy two'},
-                {num :583, word :'five hundred eighty three'},
-                {num :123, word :'one hundred twenty three'}
+                {num:999,word:'nine hundred ninety-nine'},
+                {num:872,word:'eight hundred seventy-two'},
+                {num :583, word :'five hundred eighty-three'},
+                {num :123, word :'one hundred twenty-three'}
               ])('$num gives $word',({num,word})=>{
 
                  //Arrange
