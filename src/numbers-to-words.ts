@@ -22,7 +22,9 @@ export function getNumberToWords() :INumberToWord{
 
                 const tens = getTensWord(num)
   
-                word = thousands+(hundreds!=='zero'?` ${hundreds}`:'')
+                word = thousands+
+                (hundreds!=='zero'?` ${hundreds}`:'')+
+                (tens !=='zero'?` ${tens}`:'')
                 
              }
              else if(isBetween100and999(num)){
@@ -87,7 +89,7 @@ function getTensWord(num:number):string{
        if(tens ===0){
         return 'zero'
        }
-       
+
      return NumberToWord[tens]
 }
 
