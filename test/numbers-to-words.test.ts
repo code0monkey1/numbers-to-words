@@ -1,4 +1,4 @@
-import { getNumberToWords } from "../src/numbers-to-words"
+import { getNumbersToWords } from "../src/numbers-to-words"
 
 describe('numbers-to-words', () => {
       
@@ -18,7 +18,7 @@ describe('numbers-to-words', () => {
         ])('$num gives $word',({num,word})=>{
            
            //arrange
-             const sut= getNumberToWords()
+             const sut= getNumbersToWords()
 
             //act
             const result= sut.convert(num)
@@ -47,7 +47,7 @@ describe('numbers-to-words', () => {
              ])('$num gives $word',({num,word})=>{
                 
                 //Arrange
-                  const sut= getNumberToWords()
+                  const sut= getNumbersToWords()
      
                  //Act
                  const result= sut.convert(num)
@@ -74,7 +74,7 @@ describe('numbers-to-words', () => {
          ])('$num gives $word',({num,word})=>{
             
             //Arrange
-              const sut= getNumberToWords()
+              const sut= getNumbersToWords()
   
              //Act
              const result= sut.convert(num)
@@ -101,7 +101,7 @@ describe('numbers-to-words', () => {
       ])('$num gives $word',({num,word})=>{
          
          //Arrange
-           const sut= getNumberToWords()
+           const sut= getNumbersToWords()
    
           //Act
           const result= sut.convert(num)
@@ -131,7 +131,7 @@ describe('numbers-to-words', () => {
               ])('$num gives $word',({num,word})=>{
 
                  //Arrange
-                const sut= getNumberToWords()
+                const sut= getNumbersToWords()
         
                 //Act
                 const result= sut.convert(num)
@@ -158,7 +158,7 @@ describe('numbers-to-words', () => {
                 ])('$num gives $word',({num,word})=>{
 
                   //Arrange
-                  const sut= getNumberToWords()
+                  const sut= getNumbersToWords()
           
                   //Act
                   const result= sut.convert(num)
@@ -181,7 +181,7 @@ describe('numbers-to-words', () => {
               ])('$num gives $word',({num,word})=>{
 
                  //Arrange
-                const sut= getNumberToWords()
+                const sut= getNumbersToWords()
         
                 //Act
                 const result= sut.convert(num)
@@ -203,7 +203,7 @@ describe('numbers-to-words', () => {
               ])('$num gives $word',({num,word})=>{
 
                  //Arrange
-                const sut= getNumberToWords()
+                const sut= getNumbersToWords()
         
                 //Act
                 const result= sut.convert(num)
@@ -225,7 +225,7 @@ describe('numbers-to-words', () => {
               ])('$num gives $word',({num,word})=>{
 
                  //Arrange
-                const sut= getNumberToWords()
+                const sut= getNumbersToWords()
         
                 //Act
                 const result= sut.convert(num)
@@ -261,7 +261,7 @@ describe('numbers-to-words', () => {
               ])('$num gives $word',({num,word})=>{
 
                  //Arrange
-                const sut= getNumberToWords()
+                const sut= getNumbersToWords()
         
                 //Act
                 const result= sut.convert(num)

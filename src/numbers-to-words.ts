@@ -32,18 +32,18 @@ const NumberToWord:Record<number,string> ={
       90 :'ninety'
 
   }
-interface INumberToWord{
+interface INumbersToWords{
 
       convert:(num : number)=>string
 }
 
-export function getNumberToWord() :INumberToWord{
+export function getNumbersToWords() :INumbersToWords{
 
 
       return {
          convert(num:number){
 
-             let word = ''
+             let word:string;
               
              if(isBetween1000and9999(num)){
                 
