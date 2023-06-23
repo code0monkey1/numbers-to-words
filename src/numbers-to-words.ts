@@ -85,6 +85,26 @@ function  isBetween21and99(num:number):boolean{
     return num>20 && num <100
 } 
 
+
+function isBetween1000and9999(num:number):boolean{
+  
+  return num>=1000 && num<=9999
+}
+
+
+function isBetween100and999(num:number):boolean{
+  
+  return num>=100 && num<=999
+}
+
+function getOnesWord(num:number):string{
+  
+  const ones = num%10
+  
+  return NumberToWord[ones]
+  
+}
+
 function getTensWord(num:number):string{
  
       let tens=num%100
@@ -97,26 +117,6 @@ function getTensWord(num:number):string{
 
      return NumberToWord[tens]
 }
-
-function isBetween1000and9999(num:number):boolean{
-
-     return num>=1000 && num<=9999
-}
-
-
-function isBetween100and999(num:number):boolean{
-
-     return num>=100 && num<=999
-}
-
-function getOnesWord(num:number):string{
-
-     const ones = num%10
-
-     return NumberToWord[ones]
-
-}
-
 function getHundredsWord(num:number):string{
      
      let hundreds = num%1000
