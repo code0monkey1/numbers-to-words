@@ -37,7 +37,20 @@ export function getNumberToWords() :INumberToWord{
 
   function getThousands(num: number) {
 
-
+    
+    if(isPureMultipleOfHundred(num)){
+             
+            const firstTwo= num/100
+    
+            const tensWord = getTensWord(firstTwo)
+    
+            const onesWord = getOnesWord(firstTwo)
+    
+            console.log(firstTwo,tensWord,onesWord)
+    
+            return tensWord+(onesWord!=='zero'?onesWord:'')+' hundred'
+      }
+ 
     const thousands = getThousandsWord(num)
 
     const hundreds = getHundredsWord(num)
@@ -45,19 +58,6 @@ export function getNumberToWords() :INumberToWord{
     const tens = getTensWord(num)
 
     const ones = getOnesWord(num)
-
-    if(tens==='zero' && ones=='zero'){
-         
-        const firstTwo= num/100
-
-        const tensWord = getTensWord(firstTwo)
-
-        const onesWord = getOnesWord(firstTwo)
-
-        console.log(firstTwo,tensWord,onesWord)
-
-        return tensWord+(onesWord!=='zero'?onesWord:'')+' hundred'
-    }
     
     return  thousands +
       (hundreds !== 'zero' ? ` ${hundreds}` : '') +
