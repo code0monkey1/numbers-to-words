@@ -106,7 +106,7 @@ function getOnesWord(num:number):string{
 function getHundredsWord(num:number):string{
      
      let hundreds = num%1000
-      console.log(hundreds)
+     
       hundreds = Math.floor(hundreds/100)
 
      return NumberToWord[hundreds] + ' hundred'
