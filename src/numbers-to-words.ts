@@ -15,7 +15,7 @@ export function getNumberToWords() :INumberToWord{
 
               let word = ''
 
-             if(isBetween20and100(num)){
+             if(isBetween21and99(num)){
                    const tens = getTensWord(num)
 
                    const ones = getOnesWord(num)
@@ -35,7 +35,7 @@ export function getNumberToWords() :INumberToWord{
       }
 }
 
-function  isBetween20and100(num:number):boolean{
+function  isBetween21and99(num:number):boolean{
     return num>20 && num <100
 } 
 
