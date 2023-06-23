@@ -64,9 +64,12 @@ export function getNumberToWords() :INumberToWord{
   function isPureMultipleOfHundred(num:number){
       
     console.log(num,' : is pure multiple of hundred')
+
       const tens = getTensWord(num)
 
       const ones = getOnesWord(num)
+
+      console.log(tens,ones)
 
       return (tens==='zero' && ones=='zero')
 
