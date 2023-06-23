@@ -103,9 +103,11 @@ function getHundredsWord(num:number):string{
 }
 
 function getThousandsWord(num :number):string{
-  const thousands = Math.floor((num/1000))
+   const thousands = Math.floor(num/1000)
 
-  return NumberToWord[thousands]
+   console.log(thousands)
+
+   return 'thousands'
 }
 
 const NumberToWord:Record<number,string> ={
