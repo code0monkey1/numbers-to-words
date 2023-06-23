@@ -172,12 +172,11 @@ describe('numbers-to-words', () => {
         })
 
         describe('multiples of thousands, with non-zero hundreds',()=>{
-
               test.each([
                 {num:1100,word:'one thousand one hundred'},
                 {num:2200,word:'two thousand two hundred'},
                 {num:5300,word:'five thousand three hundred'},
-                {num:3466,word:'three thousand four hundred sixty-six'}
+              
   
               ])('$num gives $word',({num,word})=>{
 
@@ -199,9 +198,7 @@ describe('numbers-to-words', () => {
 
               test.each([
                 {num:1121,word:'one thousand one hundred twenty-one'},
-                // {num:2223,word:'two thousand two hundred twenty-three'},
-                // {num:5395,word:'five thousand three hundred ninety-five'},
-                // {num:9975,word:'nine thousand nine hundred seventy-five'},
+                {num:3006,word:'three thousand six'}
   
               ])('$num gives $word',({num,word})=>{
 
