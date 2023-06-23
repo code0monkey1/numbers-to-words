@@ -66,6 +66,19 @@ export function getNumberToWords() :INumberToWord{
       
   }
 
+  function isPureMultipleOfHundred(num:number){
+    
+      const tens = getTensWord(num)
+
+      const ones = getOnesWord(num)
+
+      return(tens==='zero' && ones=='zero')
+
+  }
+  
+
+  
+
   function getTens(num: number) {
 
     const tens = getTensWord(num)
