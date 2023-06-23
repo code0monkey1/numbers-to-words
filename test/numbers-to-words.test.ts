@@ -172,10 +172,10 @@ describe('numbers-to-words', () => {
         describe('pure multiples of thousands',()=>{
 
               test.each([
-                {num:1000,word:'one thousand'},
-                {num:2000,word:'two thousand'},
-                {num:5000,word:'five thousand'},
-                {num:9000,word:'nine thousand'},
+                {num:1000,word:'ten hundred'},
+                {num:2000,word:'twenty hundred'},
+                {num:5000,word:'fifty hundred'},
+                {num:9000,word:'ninety hundred'},
   
               ])('$num gives $word',({num,word})=>{
 
