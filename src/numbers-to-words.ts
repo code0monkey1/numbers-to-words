@@ -18,7 +18,7 @@ export function getNumberToWords() :INumberToWord{
                 
                 const thousands = getThousandsWord(num)
 
-                // const hundreds 
+        
 
 
                 return word = thousands
@@ -67,7 +67,7 @@ export function getNumberToWords() :INumberToWord{
     const parsedOnes = ones!=='zero' ?
       `${tens !== 'zero' ? '-' : ' '}${ones}` : ''
 
-    return parsedHundreds!=='zero'?parsedHundreds:''+parsedTens+parsedOnes
+    return parsedHundreds+parsedTens+parsedOnes
   }
 }
 
