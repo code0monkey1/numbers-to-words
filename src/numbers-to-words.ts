@@ -42,11 +42,8 @@ export function getNumberToWords() :INumberToWord{
              
             const firstTwo= num/100
     
-            const tensWord = getTensWord(firstTwo)
-    
-            const onesWord = getOnesWord(firstTwo)
-    
-            return tensWord+(onesWord!=='zero'?` ${onesWord}`:'')+' hundred'
+            return getTens(firstTwo)+' hundred'
+
       }
  
     const thousands = getThousandsWord(num)
@@ -70,13 +67,10 @@ export function getNumberToWords() :INumberToWord{
 
       const ones = getOnesWord(num)
 
-      return(tens==='zero' && ones=='zero')
+      return (tens==='zero' && ones=='zero')
 
   }
   
-
-  
-
   function getTens(num: number) {
 
     const tens = getTensWord(num)
