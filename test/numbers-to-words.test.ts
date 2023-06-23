@@ -255,7 +255,7 @@ describe('numbers-to-words', () => {
                 {num:555,word:'five hundred fifty-five'},
                 {num:2000,word:'twenty hundred'},
                 {num:3466,word:'three thousand four hundred sixty-six'},
-                {num:2400 ,word:'two thousand four hundred'}
+                {num:2400 ,word:'twenty four hundred'}
   
               ])('$num gives $word',({num,word})=>{
 
