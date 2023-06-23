@@ -24,7 +24,7 @@ export function getNumberToWords() :INumberToWord{
 
                   const hundreds = getHundredsWord(num)
                  
-                  const tens = getTensWord(num%100)
+                  const tens = getTensWord(num)
 
                   const ones = getOnesWord(num)
                   
