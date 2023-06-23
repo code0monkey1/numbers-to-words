@@ -45,6 +45,25 @@ export function getNumberToWords() :INumberToWord{
     const tens = getTensWord(num)
 
     const ones = getOnesWord(num)
+
+    if(tens==='zero' && ones=='zero'){
+            
+             let word ;
+          
+            const firstTwoDigits = num /100
+
+           if(isBetween21and99(firstTwoDigits)){
+
+                   word = getTens(firstTwoDigits)
+             }
+             else{
+
+                word= NumberToWord[firstTwoDigits]
+             }
+
+
+        return word+" hundred";
+    }
     
     return  thousands +
       (hundreds !== 'zero' ? ` ${hundreds}` : '') +
@@ -60,7 +79,7 @@ export function getNumberToWords() :INumberToWord{
     const ones = getOnesWord(num)
 
     return tens+(ones!=='zero'?'-'+ones:'')
-    
+
   }
 
   function getHundreds(num: number) {
